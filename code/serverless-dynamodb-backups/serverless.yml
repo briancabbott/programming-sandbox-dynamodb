@@ -1,0 +1,44 @@
+service: serverless-dynamodb-backups
+
+custom:
+  tableRegex: "" # Set if you want to use a Regex pattern against all tables in region.
+  tableFile: "" # Set if you want to read table names from a file.
+  tableName: "" # Set if you want to backup a single table
+  backupRate: rate(10 minutes)
+  backupRetentionDays: 1
+  backupRemovalEnabled: true
+  slackWebhook: ""
+
+provider:
+  name: aws
+  runtime: python3.6
+  timeout: 30
+  memorySize: 128
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:CreateBackup"
+      Resource:
+        Fn::Join:
+          - ":"
+          - - "arn:aws:dynamodb"
+            - Ref: 'AWS::Region'
+            - Ref: 'AWS::AccountId'
+            - "table/*"
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:ListTables"
+      Resource: "*"
+  environment:
+    BACKUP_REMOVAL_ENABLED: ${self:custom.backupRemovalEnabled}
+    BACKUP_RETENTION_DAYS: ${self:custom.backupRetentionDays}
+    TABLE_REGEX: ${self:custom.tableRegex}
+    TABLE_FILE: ${self:custom.tableFile}
+    TABLE_NAME: ${self:custom.tableName}
+    SLACK_WEBHOOK: ${self:custom.slackWebhook}
+
+functions:
+  createBackup:
+    handler: handler.main
+    events:
+      - schedule: ${self:custom.backupRate}

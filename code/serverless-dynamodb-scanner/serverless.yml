@@ -1,0 +1,41 @@
+service: serverless-dynamodb-scanner
+
+custom:
+  dynamodbTableArn: ''
+  kinesisStreamArn: ''
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:Scan"
+      Resource: ${self:custom.dynamodbTableArn}
+    - Effect: "Allow"
+      Action:
+        - "kinesis:PutRecords"
+      Resource: ${self:custom.kinesisStreamArn}
+    - Effect: "Allow"
+      Action:
+        - "ssm:GetParameter"
+        - "ssm:PutParameter"
+      Resource: 'arn:aws:ssm:*:*:parameter/ddbScanner/lastEvaluatedKey'
+    - Effect: "Allow"
+      Action:
+        - "lambda:InvokeFunction"
+      Resource: "arn:aws:lambda:*:*:function:ScannerLambdaFunction"
+  environment:
+    TABLE_ARN: ${self:custom.dynamodbTableArn}
+    STREAM_ARN: ${self:custom.kinesisStreamArn}
+
+packaging:
+  exclude:
+    - example/**
+
+functions:
+  scanner:
+    handler: handler.scanner
+    timeout: 900
