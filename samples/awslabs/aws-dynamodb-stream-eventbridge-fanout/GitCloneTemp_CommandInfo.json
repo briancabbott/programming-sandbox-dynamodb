@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/aws-dynamodb-stream-eventbridge-fanout undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/aws-dynamodb-stream-eventbridge-fanout",
+    "repo": "https://github.com/awslabs/aws-dynamodb-stream-eventbridge-fanout",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/aws-dynamodb-stream-eventbridge-fanout",
+    "startTime": "2020-12-17T04:37:33.547Z",
+    "endTime": "2020-12-17T04:37:34.372Z",
+    "childProcessPid": 72438,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--aws-dynamodb-stream-eventbridge-fanout--72438"
+}

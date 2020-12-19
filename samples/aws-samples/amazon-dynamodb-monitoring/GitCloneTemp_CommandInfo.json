@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-monitoring undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-monitoring",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-monitoring",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-monitoring",
+    "startTime": "2020-12-17T17:24:54.889Z",
+    "endTime": "2020-12-17T17:24:55.600Z",
+    "childProcessPid": 99237,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-monitoring--99237"
+}

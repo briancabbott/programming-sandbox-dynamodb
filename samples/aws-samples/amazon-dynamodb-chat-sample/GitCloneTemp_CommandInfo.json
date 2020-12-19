@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-chat-sample undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-chat-sample",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-chat-sample",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-chat-sample",
+    "startTime": "2020-12-17T17:24:47.688Z",
+    "endTime": "2020-12-17T17:24:48.828Z",
+    "childProcessPid": 98515,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-chat-sample--98515"
+}

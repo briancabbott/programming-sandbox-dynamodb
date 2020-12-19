@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-streams-kinesis-adapter undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-streams-kinesis-adapter",
+    "repo": "https://github.com/awslabs/dynamodb-streams-kinesis-adapter",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-streams-kinesis-adapter",
+    "startTime": "2020-12-17T06:12:29.539Z",
+    "endTime": "2020-12-17T06:12:34.505Z",
+    "childProcessPid": 77631,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-streams-kinesis-adapter--77631"
+}

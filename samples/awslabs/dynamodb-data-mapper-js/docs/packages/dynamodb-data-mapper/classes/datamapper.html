@@ -1,0 +1,1246 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DataMapper | @aws/dynamodb-data-mapper</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@aws/dynamodb-data-mapper</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="datamapper.html">DataMapper</a>
+				</li>
+			</ul>
+			<h1>Class DataMapper</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Object mapper for domain object interaction with DynamoDB.</p>
+					</div>
+					<p>To use, define a schema that describes how an item is represented in a
+						DynamoDB table. This schema will be used to marshall a native JavaScript
+						object into its desired persisted form. Attributes present on the object
+					but not in the schema will be ignored.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DataMapper</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="datamapper.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#batchdelete" class="tsd-kind-icon">batch<wbr>Delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#batchget" class="tsd-kind-icon">batch<wbr>Get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#batchput" class="tsd-kind-icon">batch<wbr>Put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#batchwrite" class="tsd-kind-icon">batch<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="datamapper.html#createtable" class="tsd-kind-icon">create<wbr>Table</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="datamapper.html#deletetable" class="tsd-kind-icon">delete<wbr>Table</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="datamapper.html#ensuretableexists" class="tsd-kind-icon">ensure<wbr>Table<wbr>Exists</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="datamapper.html#ensuretablenotexists" class="tsd-kind-icon">ensure<wbr>Table<wbr>Not<wbr>Exists</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#executeupdateexpression" class="tsd-kind-icon">execute<wbr>Update<wbr>Expression</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#parallelscan" class="tsd-kind-icon">parallel<wbr>Scan</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#put" class="tsd-kind-icon">put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#query" class="tsd-kind-icon">query</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#scan" class="tsd-kind-icon">scan</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="datamapper.html#update" class="tsd-kind-icon">update</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Data<wbr>Mapper<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="datamapper.html" class="tsd-signature-type">DataMapper</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L104">DataMapper.ts:104</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="datamapper.html" class="tsd-signature-type">DataMapper</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="batchdelete" class="tsd-anchor"></a>
+					<h3>batch<wbr>Delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">batch<wbr>Delete&lt;T&gt;<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L132">DataMapper.ts:132</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes items from DynamoDB in batches of 25 or fewer via one or more
+										BatchWriteItem operations. The items may be from any number of tables;
+										tables and schemas for each item are determined using the
+										{DynamoDbSchema} property and the {DynamoDbTable} property on defined on
+									each item supplied.</p>
+								</div>
+								<p>This method will automatically retry any delete requests returned by
+									DynamoDB as unprocessed. Exponential backoff on unprocessed items is
+								employed on a per-table basis.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A synchronous or asynchronous iterable of items to delete.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="batchget" class="tsd-anchor"></a>
+					<h3>batch<wbr>Get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">batch<wbr>Get&lt;T&gt;<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, __namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L161">DataMapper.ts:161</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves items from DynamoDB in batches of 100 or fewer via one or more
+										BatchGetItem operations. The items may be from any number of tables;
+										tables and schemas for each item are determined using the
+										{DynamoDbSchema} property and the {DynamoDbTable} property on defined on
+									each item supplied.</p>
+								</div>
+								<p>This method will automatically retry any get requests returned by
+									DynamoDB as unprocessed. Exponential backoff on unprocessed items is
+								employed on a per-table basis.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A synchronous or asynchronous iterable of items to get.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="batchput" class="tsd-anchor"></a>
+					<h3>batch<wbr>Put</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">batch<wbr>Put&lt;T&gt;<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L203">DataMapper.ts:203</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Puts items into DynamoDB in batches of 25 or fewer via one or more
+										BatchWriteItem operations. The items may be from any number of tables;
+										tables and schemas for each item are determined using the
+										{DynamoDbSchema} property and the {DynamoDbTable} property on defined on
+									each item supplied.</p>
+								</div>
+								<p>This method will automatically retry any put requests returned by
+									DynamoDB as unprocessed. Exponential backoff on unprocessed items is
+								employed on a per-table basis.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A synchronous or asynchronous iterable of items to put.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="batchwrite" class="tsd-anchor"></a>
+					<h3>batch<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">batch<wbr>Write&lt;T&gt;<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../globals.html#writetype" class="tsd-signature-type">WriteType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../globals.html#writetype" class="tsd-signature-type">WriteType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L238">DataMapper.ts:238</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Puts or deletes items from DynamoDB in batches of 25 or fewer via one or
+										more BatchWriteItem operations. The items may belong to any number of
+										tables; tables and schemas for each item are determined using the
+										{DynamoDbSchema} property and the {DynamoDbTable} property on defined on
+									each item supplied.</p>
+								</div>
+								<p>This method will automatically retry any write requests returned by
+									DynamoDB as unprocessed. Exponential backoff on unprocessed items is
+								employed on a per-table basis.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="../globals.html#syncorasynciterable" class="tsd-signature-type">SyncOrAsyncIterable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../globals.html#writetype" class="tsd-signature-type">WriteType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A synchronous or asynchronous iterable of tuples of the
+											string &#39;put&#39;|&#39;delete&#39; and the item on which to perform the specified
+										write action.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterableIterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../globals.html#writetype" class="tsd-signature-type">WriteType</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createtable" class="tsd-anchor"></a>
+					<h3>create<wbr>Table</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Table<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, __namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L275">DataMapper.ts:275</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a CreateTable operation using the schema accessible via the
+										{DynamoDbSchema} property and the table name accessible via the
+									{DynamoDbTable} property on the prototype of the constructor supplied.</p>
+								</div>
+								<p>The promise returned by this method will not resolve until the table is
+								active and ready for use.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor used for values in the table.</p>
+									</div>
+								</li>
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="delete" class="tsd-anchor"></a>
+					<h3>delete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">delete&lt;T&gt;<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/deleteoptions.html" class="tsd-signature-type">DeleteOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/deleteparameters.html" class="tsd-signature-type">DeleteParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L317">DataMapper.ts:317</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a DeleteItem operation using the schema accessible via the
+										{DynamoDbSchema} property and the table name accessible via the
+									{DynamoDbTable} property on the item supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to delete</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/deleteoptions.html" class="tsd-signature-type">DeleteOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the DeleteItem operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L325">DataMapper.ts:325</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../interfaces/deleteparameters.html" class="tsd-signature-type">DeleteParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletetable" class="tsd-anchor"></a>
+					<h3>delete<wbr>Table</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Table<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L412">DataMapper.ts:412</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a DeleteTable operation using the schema accessible via the
+										{DynamoDbSchema} property and the table name accessible via the
+									{DynamoDbTable} property on the prototype of the constructor supplied.</p>
+								</div>
+								<p>The promise returned by this method will not resolve until the table is
+								deleted and can no longer be used.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor used for values in the table.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ensuretableexists" class="tsd-anchor"></a>
+					<h3>ensure<wbr>Table<wbr>Exists</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ensure<wbr>Table<wbr>Exists<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">: </span><a href="../interfaces/createtableoptions.html" class="tsd-signature-type">CreateTableOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L430">DataMapper.ts:430</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If the table does not already exist, perform a CreateTable operation
+										using the schema accessible via the {DynamoDbSchema} property and the
+										table name accessible via the {DynamoDbTable} property on the prototype
+									of the constructor supplied.</p>
+								</div>
+								<p>The promise returned by this method will not resolve until the table is
+								active and ready for use.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor used for values in the table.</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/createtableoptions.html" class="tsd-signature-type">CreateTableOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the CreateTable operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ensuretablenotexists" class="tsd-anchor"></a>
+					<h3>ensure<wbr>Table<wbr>Not<wbr>Exists</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ensure<wbr>Table<wbr>Not<wbr>Exists<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L463">DataMapper.ts:463</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If the table exists, perform a DeleteTable operation using the schema
+										accessible via the {DynamoDbSchema} property and the table name
+										accessible via the {DynamoDbTable} property on the prototype of the
+									constructor supplied.</p>
+								</div>
+								<p>The promise returned by this method will not resolve until the table is
+								deleted and can no longer be used.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor used for values in the table.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="executeupdateexpression" class="tsd-anchor"></a>
+					<h3>execute<wbr>Update<wbr>Expression</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Update<wbr>Expression&lt;T&gt;<span class="tsd-signature-symbol">(</span>expression<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UpdateExpression</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/executeupdateexpressionoptions.html" class="tsd-signature-type">ExecuteUpdateExpressionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L950">DataMapper.ts:950</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Execute a custom update expression using the schema and table name
+									defined on the provided <code>valueConstructor</code>.</p>
+								</div>
+								<p>This method does not support automatic version checking, as the current
+									state of a table&#39;s version attribute cannot be inferred from an update
+									expression object. To perform a version check manually, add a condition
+								expression:</p>
+								<pre><code class="lang-typescript"> <span class="hljs-keyword">const</span> currentVersion = <span class="hljs-number">1</span>;
+ updateExpression.set(<span class="hljs-string">'nameOfVersionAttribute'</span>, currentVersion + <span class="hljs-number">1</span>);
+ <span class="hljs-keyword">const</span> condition = {
+     <span class="hljs-keyword">type</span>: <span class="hljs-string">'Equals'</span>,
+     subject: <span class="hljs-string">'nameOfVersionAttribute'</span>,
+     object: currentVersion
+ };
+
+ <span class="hljs-keyword">const</span> updated = <span class="hljs-keyword">await</span> mapper.executeUpdateExpression(
+     updateExpression,
+     itemKey,
+     <span class="hljs-keyword">constructor</span>,
+     {condition}
+ );
+</code></pre>
+								<p><strong>NB:</strong> Property names and attribute paths in the update expression
+								should reflect the names used in the schema.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expression: <span class="tsd-signature-type">UpdateExpression</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The update expression to execute.</p>
+									</div>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The full key to identify the object being
+										updated.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>propertyName: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor with which to map the result to
+										a domain object.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/executeupdateexpressionoptions.html" class="tsd-signature-type">ExecuteUpdateExpressionOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options with which to customize the UpdateItem
+										request.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The updated item.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get&lt;T&gt;<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/getoptions.html" class="tsd-signature-type">GetOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/getparameters.html" class="tsd-signature-type">GetParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L497">DataMapper.ts:497</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a GetItem operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the item supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to get</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/getoptions.html" class="tsd-signature-type">GetOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the GetItem operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L505">DataMapper.ts:505</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../interfaces/getparameters.html" class="tsd-signature-type">GetParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="parallelscan" class="tsd-anchor"></a>
+					<h3>parallel<wbr>Scan</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">parallel<wbr>Scan&lt;T&gt;<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, segments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/parallelscanoptions.html" class="tsd-signature-type">ParallelScanOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parallelscaniterator.html" class="tsd-signature-type">ParallelScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">parallel<wbr>Scan&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../globals.html#parallelscanparameters" class="tsd-signature-type">ParallelScanParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parallelscaniterator.html" class="tsd-signature-type">ParallelScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L580">DataMapper.ts:580</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a Scan operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the prototype of the constructor supplied.</p>
+								</div>
+								<p>This scan will be performed by multiple parallel workers, each of which
+									will perform a sequential scan of a segment of the table or index. Use
+								the <code>segments</code> parameter to specify the number of workers to be used.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor to be used for each item
+										returned by the scan</p>
+									</div>
+								</li>
+								<li>
+									<h5>segments: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of parallel workers to use to perform
+										the scan</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/parallelscanoptions.html" class="tsd-signature-type">ParallelScanOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the Scan operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="parallelscaniterator.html" class="tsd-signature-type">ParallelScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An asynchronous iterator that yields scan results. Intended
+							to be consumed with a <code>for await ... of</code> loop.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L589">DataMapper.ts:589</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../globals.html#parallelscanparameters" class="tsd-signature-type">ParallelScanParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="parallelscaniterator.html" class="tsd-signature-type">ParallelScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="put" class="tsd-anchor"></a>
+					<h3>put</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">put&lt;T&gt;<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/putoptions.html" class="tsd-signature-type">PutOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">put&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/putparameters.html" class="tsd-signature-type">PutParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L627">DataMapper.ts:627</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a PutItem operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the item supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to save to DynamoDB</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/putoptions.html" class="tsd-signature-type">PutOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the PutItem operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L635">DataMapper.ts:635</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../interfaces/putparameters.html" class="tsd-signature-type">PutParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="query" class="tsd-anchor"></a>
+					<h3>query</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">query&lt;T&gt;<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, keyCondition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ConditionExpression</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/queryoptions.html" class="tsd-signature-type">QueryOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="queryiterator.html" class="tsd-signature-type">QueryIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">query&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/queryparameters.html" class="tsd-signature-type">QueryParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="queryiterator.html" class="tsd-signature-type">QueryIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L730">DataMapper.ts:730</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a Query operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the prototype of the constructor supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor to use for each query result.</p>
+									</div>
+								</li>
+								<li>
+									<h5>keyCondition: <span class="tsd-signature-type">ConditionExpression</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A condition identifying a particular hash key
+										value.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/queryoptions.html" class="tsd-signature-type">QueryOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Additional options for customizing the Query
+										operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="queryiterator.html" class="tsd-signature-type">QueryIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An asynchronous iterator that yields query results. Intended
+							to be consumed with a <code>for await ... of</code> loop.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L742">DataMapper.ts:742</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../interfaces/queryparameters.html" class="tsd-signature-type">QueryParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Named parameter object</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="queryiterator.html" class="tsd-signature-type">QueryIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="scan" class="tsd-anchor"></a>
+					<h3>scan</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">scan&lt;T&gt;<span class="tsd-signature-symbol">(</span>valueConstructor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/scanoptions.html" class="tsd-signature-type">ScanOptions</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/parallelscanworkeroptions.html" class="tsd-signature-type">ParallelScanWorkerOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scaniterator.html" class="tsd-signature-type">ScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">scan&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../globals.html#scanparameters" class="tsd-signature-type">ScanParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../globals.html#parallelscanworkerparameters" class="tsd-signature-type">ParallelScanWorkerParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scaniterator.html" class="tsd-signature-type">ScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L786">DataMapper.ts:786</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform a Scan operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the prototype of the constructor supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>valueConstructor: <span class="tsd-signature-type">ZeroArgumentsConstructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The constructor to use for each item returned by
+										the Scan operation.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/scanoptions.html" class="tsd-signature-type">ScanOptions</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/parallelscanworkeroptions.html" class="tsd-signature-type">ParallelScanWorkerOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Additional options for customizing the Scan
+										operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scaniterator.html" class="tsd-signature-type">ScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An asynchronous iterator that yields scan results. Intended
+							to be consumed with a <code>for await ... of</code> loop.</p>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L794">DataMapper.ts:794</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../globals.html#scanparameters" class="tsd-signature-type">ScanParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../globals.html#parallelscanworkerparameters" class="tsd-signature-type">ParallelScanWorkerParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="scaniterator.html" class="tsd-signature-type">ScanIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">update&lt;T&gt;<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/updateoptions.html" class="tsd-signature-type">UpdateOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update&lt;T&gt;<span class="tsd-signature-symbol">(</span>parameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/updateparameters.html" class="tsd-signature-type">UpdateParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L835">DataMapper.ts:835</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform an UpdateItem operation using the schema accessible via the
+										{DynamoDbSchema} method and the table name accessible via the
+									{DynamoDbTable} method on the item supplied.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to save to DynamoDB</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/updateoptions.html" class="tsd-signature-type">UpdateOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options to configure the UpdateItem operation</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/awslabs/dynamodb-data-mapper-js/blob/c504011/packages/dynamodb-data-mapper/src/DataMapper.ts#L843">DataMapper.ts:843</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>deprecated</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="../interfaces/stringtoanyobjectmap.html" class="tsd-signature-type">StringToAnyObjectMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parameters: <a href="../interfaces/updateparameters.html" class="tsd-signature-type">UpdateParameters</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="datamapper.html" class="tsd-kind-icon">Data<wbr>Mapper</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="datamapper.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#batchdelete" class="tsd-kind-icon">batch<wbr>Delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#batchget" class="tsd-kind-icon">batch<wbr>Get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#batchput" class="tsd-kind-icon">batch<wbr>Put</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#batchwrite" class="tsd-kind-icon">batch<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="datamapper.html#createtable" class="tsd-kind-icon">create<wbr>Table</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#delete" class="tsd-kind-icon">delete</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="datamapper.html#deletetable" class="tsd-kind-icon">delete<wbr>Table</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="datamapper.html#ensuretableexists" class="tsd-kind-icon">ensure<wbr>Table<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="datamapper.html#ensuretablenotexists" class="tsd-kind-icon">ensure<wbr>Table<wbr>Not<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#executeupdateexpression" class="tsd-kind-icon">execute<wbr>Update<wbr>Expression</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#parallelscan" class="tsd-kind-icon">parallel<wbr>Scan</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#put" class="tsd-kind-icon">put</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#query" class="tsd-kind-icon">query</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#scan" class="tsd-kind-icon">scan</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="datamapper.html#update" class="tsd-kind-icon">update</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

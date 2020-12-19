@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-reviews-inserter-blog undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-reviews-inserter-blog",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-reviews-inserter-blog",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-reviews-inserter-blog",
+    "startTime": "2020-12-17T17:24:55.601Z",
+    "endTime": "2020-12-17T17:24:56.305Z",
+    "childProcessPid": 99295,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-reviews-inserter-blog--99295"
+}

@@ -1,0 +1,645 @@
+---
+Description: This stack creates a VPC, an EC2 Amazon Linux host in the VPC with a
+  Public IP, and deploys Gremlin Server on it. **WARNING** This template creates
+  an Amazon EC2 instance. You will be billed for the AWS resources used if you
+  create a stack from this template. Amazon Linux created on 2018-06-22.
+AWSTemplateFormatVersion: '2010-09-09'
+Mappings:
+  AWSRegionArch2AMI:
+    ap-northeast-1:
+      HVM64: ami-449f483b
+      HVMG2: ami-9c9443e3
+      PV64: ami-6593441a
+    ap-northeast-2:
+      HVM64: ami-5bd46135
+      HVMG2: ami-ebc47185
+    ap-south-1:
+      HVM64: ami-bc83a9d3
+      HVMG2: ami-5a8da735
+    ap-southeast-1:
+      HVM64: ami-d6fdfeaa
+      HVMG2: ami-ed838091
+      PV64: ami-c8fcffb4
+    ap-southeast-2:
+      HVM64: ami-4ff8212d
+      HVMG2: ami-33f92051
+      PV64: ami-c4c71ea6
+    ca-central-1:
+      HVM64: ami-49e86a2d
+      HVMG2: ami-03e86a67
+    eu-central-1:
+      HVM64: ami-e056690b
+      HVMG2: ami-a058674b
+      PV64: ami-1a744bf1
+    eu-west-1:
+      HVM64: ami-41505fab
+      HVMG2: ami-e4515e0e
+      PV64: ami-3c5758d6
+    eu-west-2:
+      HVM64: ami-e2b35a85
+      HVMG2: ami-b2b55cd5
+    eu-west-3:
+      HVM64: ami-78f24205
+      HVMG2: ami-d50bbaa8
+    sa-east-1:
+      HVM64: ami-09d58f65
+      HVMG2: ami-83d58fef
+      PV64: ami-6dd58f01
+    us-east-1:
+      HVM64: ami-f316478c
+      HVMG2: ami-cfe4b2b0
+      PV64: ami-b41445cb
+    us-east-2:
+      HVM64: ami-ae0f36cb
+      HVMG2: ami-40142d25
+    us-west-1:
+      HVM64: ami-25bf5946
+      HVMG2: ami-0e86606d
+      PV64: ami-1a876179
+    us-west-2:
+      HVM64: ami-39d39d41
+      HVMG2: ami-0ad99772
+      PV64: ami-21d09e59
+  AWSInstanceType2Arch:
+    t2.nano:
+      Arch: HVM64
+    t2.micro:
+      Arch: HVM64
+    t2.small:
+      Arch: HVM64
+    t2.medium:
+      Arch: HVM64
+    t2.large:
+      Arch: HVM64
+    t2.xlarge:
+      Arch: HVM64
+    t2.2xlarge:
+      Arch: HVM64
+    m4.large:
+      Arch: HVM64
+    m4.xlarge:
+      Arch: HVM64
+    m4.2xlarge:
+      Arch: HVM64
+    m4.4xlarge:
+      Arch: HVM64
+    m4.10xlarge:
+      Arch: HVM64
+    m4.16xlarge:
+      Arch: HVM64
+    m5.large:
+      Arch: HVM64
+    m5.xlarge:
+      Arch: HVM64
+    m5.2xlarge:
+      Arch: HVM64
+    m5.4xlarge:
+      Arch: HVM64
+    m5.12xlarge:
+      Arch: HVM64
+    m5.24xlarge:
+      Arch: HVM64
+    m5d.large:
+      Arch: HVM64
+    m5d.xlarge:
+      Arch: HVM64
+    m5d.2xlarge:
+      Arch: HVM64
+    m5d.4xlarge:
+      Arch: HVM64
+    m5d.12xlarge:
+      Arch: HVM64
+    m5d.24xlarge:
+      Arch: HVM64
+    c4.large:
+      Arch: HVM64
+    c4.xlarge:
+      Arch: HVM64
+    c4.2xlarge:
+      Arch: HVM64
+    c4.4xlarge:
+      Arch: HVM64
+    c4.8xlarge:
+      Arch: HVM64
+    c5.large:
+      Arch: HVM64
+    c5.xlarge:
+      Arch: HVM64
+    c5.2xlarge:
+      Arch: HVM64
+    c5.4xlarge:
+      Arch: HVM64
+    c5.9xlarge:
+      Arch: HVM64
+    c5.18xlarge:
+      Arch: HVM64
+    c5d.xlarge:
+      Arch: HVM64
+    c5d.2xlarge:
+      Arch: HVM64
+    c5d.4xlarge:
+      Arch: HVM64
+    c5d.9xlarge:
+      Arch: HVM64
+    c5d.18xlarge:
+      Arch: HVM64
+    r4.large:
+      Arch: HVM64
+    r4.xlarge:
+      Arch: HVM64
+    r4.2xlarge:
+      Arch: HVM64
+    r4.4xlarge:
+      Arch: HVM64
+    r4.8xlarge:
+      Arch: HVM64
+    r4.16xlarge:
+      Arch: HVM64
+    x1.16xlarge:
+      Arch: HVM64
+    x1.32xlarge:
+      Arch: HVM64
+    x1e.xlarge:
+      Arch: HVM64
+    x1e.2xlarge:
+      Arch: HVM64
+    x1e.4xlarge:
+      Arch: HVM64
+    x1e.8xlarge:
+      Arch: HVM64
+    x1e.16xlarge:
+      Arch: HVM64
+    x1e.32xlarge:
+      Arch: HVM64
+    d2.xlarge:
+      Arch: HVM64
+    d2.2xlarge:
+      Arch: HVM64
+    d2.4xlarge:
+      Arch: HVM64
+    d2.8xlarge:
+      Arch: HVM64
+    h1.2xlarge:
+      Arch: HVM64
+    h1.4xlarge:
+      Arch: HVM64
+    h1.8xlarge:
+      Arch: HVM64
+    h1.16xlarge:
+      Arch: HVM64
+    i3.large:
+      Arch: HVM64
+    i3.xlarge:
+      Arch: HVM64
+    i3.2xlarge:
+      Arch: HVM64
+    i3.4xlarge:
+      Arch: HVM64
+    i3.8xlarge:
+      Arch: HVM64
+    i3.16xlarge:
+      Arch: HVM64
+    i3.metal:
+      Arch: HVM64
+    f1.2xlarge:
+      Arch: HVM64
+    f1.16xlarge:
+      Arch: HVM64
+    g3.4xlarge:
+      Arch: HVM64
+    g3.8xlarge:
+      Arch: HVM64
+    g3.16xlarge:
+      Arch: HVM64
+    p2.xlarge:
+      Arch: HVM64
+    p2.8xlarge:
+      Arch: HVM64
+    p2.16xlarge:
+      Arch: HVM64
+    p3.2xlarge:
+      Arch: HVM64
+    p3.8xlarge:
+      Arch: HVM64
+    p3.16xlarge:
+      Arch: HVM64
+Parameters:
+  InstanceType:
+    Description: EC2 instance type
+    Type: String
+    Default: m4.10xlarge
+    AllowedValues:
+    - t2.nano
+    - t2.micro
+    - t2.small
+    - t2.medium
+    - t2.large
+    - t2.xlarge
+    - t2.2xlarge
+    - m4.large
+    - m4.xlarge
+    - m4.2xlarge
+    - m4.4xlarge
+    - m4.10xlarge
+    - m4.16xlarge
+    - m5.large
+    - m5.xlarge
+    - m5.2xlarge
+    - m5.4xlarge
+    - m5.12xlarge
+    - m5.24xlarge
+    - m5d.large
+    - m5d.xlarge
+    - m5d.2xlarge
+    - m5d.4xlarge
+    - m5d.12xlarge
+    - m5d.24xlarge
+    - c4.large
+    - c4.xlarge
+    - c4.2xlarge
+    - c4.4xlarge
+    - c4.8xlarge
+    - c5.large
+    - c5.xlarge
+    - c5.2xlarge
+    - c5.4xlarge
+    - c5.9xlarge
+    - c5.18xlarge
+    - c5d.xlarge
+    - c5d.2xlarge
+    - c5d.4xlarge
+    - c5d.9xlarge
+    - c5d.18xlarge
+    - r4.large
+    - r4.xlarge
+    - r4.2xlarge
+    - r4.4xlarge
+    - r4.8xlarge
+    - r4.16xlarge
+    - x1.16xlarge
+    - x1.32xlarge
+    - x1e.xlarge
+    - x1e.2xlarge
+    - x1e.4xlarge
+    - x1e.8xlarge
+    - x1e.16xlarge
+    - x1e.32xlarge
+    - d2.xlarge
+    - d2.2xlarge
+    - d2.4xlarge
+    - d2.8xlarge
+    - h1.2xlarge
+    - h1.4xlarge
+    - h1.8xlarge
+    - h1.16xlarge
+    - i3.large
+    - i3.xlarge
+    - i3.2xlarge
+    - i3.4xlarge
+    - i3.8xlarge
+    - i3.16xlarge
+    - i3.metal
+    - f1.2xlarge
+    - f1.16xlarge
+    - g3.4xlarge
+    - g3.8xlarge
+    - g3.16xlarge
+    - p2.xlarge
+    - p2.8xlarge
+    - p2.16xlarge
+    - p3.2xlarge
+    - p3.8xlarge
+    - p3.16xlarge
+    ConstraintDescription: Must be a valid EC2 instance type.
+  KeyName:
+    Description: Name of existing EC2 SSH key
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: ''
+    MinLength: '0'
+    MaxLength: '255'
+    AllowedPattern: "[\\x20-\\x7E]*"
+    ConstraintDescription: can contain only ASCII characters.
+  SSHLocation:
+    Description: CIDR range allowed to SSH into EC2 instance
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 0.0.0.0/32
+    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  VPCRange:
+    Description: CIDR range to assign to new VPC
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 10.0.0.0/16
+    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  SubnetRange:
+    Description: CIDR range to assign to new subnet in VPC
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 10.0.0.0/24
+    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  GremlinServerPort:
+    Description: The port to serve Gremlin Server Websockets API out of
+    Type: String
+    MinLength: '1'
+    MaxLength: '5'
+    Default: '8182'
+    AllowedPattern: "(\\d{1,5})"
+    ConstraintDescription: must be a valid port.
+  StorageBackendPropertiesFileS3Url:
+    Description: S3 URL to the JanusGraph configuration file
+    Type: String
+    MinLength: '1'
+  JanusGraphInstanceProfilePath:
+    Description: The IAM path
+    Type: String
+    Default: "/"
+    MinLength: '1'
+  JanusGraphInstanceProfileRole:
+    Description: An IAM role that includes at least S3 read and DynamoDB full access
+    Type: String
+    MinLength: '1'
+Resources:
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path:
+        Ref: JanusGraphInstanceProfilePath
+      Roles:
+      - Ref: JanusGraphInstanceProfileRole
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock:
+        Ref: VPCRange
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+      - Key: Application
+        Value:
+          Ref: AWS::StackId
+  Subnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Ref: SubnetRange
+      Tags:
+      - Key: Application
+        Value:
+          Ref: AWS::StackId
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Application
+        Value:
+          Ref: AWS::StackId
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:
+        Ref: VPC
+      InternetGatewayId:
+        Ref: InternetGateway
+  RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: VPC
+      Tags:
+      - Key: Application
+        Value:
+          Ref: AWS::StackId
+  Route:
+    Type: AWS::EC2::Route
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId:
+        Ref: RouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: InternetGateway
+  SubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: Subnet
+      RouteTableId:
+        Ref: RouteTable
+  NetworkAcl:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+      VpcId:
+        Ref: VPC
+      Tags:
+      - Key: Application
+        Value:
+          Ref: AWS::StackId
+  InboundSSHNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '101'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock:
+        Ref: SSHLocation
+      PortRange:
+        From: '22'
+        To: '22'
+  InboundResponsePortsNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '102'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'false'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '1024'
+        To: '65535'
+  OutboundHTTPNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '101'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '80'
+        To: '80'
+  OutboundHTTPSNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '102'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '443'
+        To: '443'
+  OutboundResponsePortsNetworkAclEntry:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+      NetworkAclId:
+        Ref: NetworkAcl
+      RuleNumber: '103'
+      Protocol: '6'
+      RuleAction: allow
+      Egress: 'true'
+      CidrBlock: 0.0.0.0/0
+      PortRange:
+        From: '1024'
+        To: '65535'
+  SubnetNetworkAclAssociation:
+    Type: AWS::EC2::SubnetNetworkAclAssociation
+    Properties:
+      SubnetId:
+        Ref: Subnet
+      NetworkAclId:
+        Ref: NetworkAcl
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId:
+        Ref: VPC
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp:
+          Ref: SSHLocation
+  WebServerInstance:
+    Type: AWS::EC2::Instance
+    DependsOn: AttachGateway
+    Properties:
+      DisableApiTermination: 'FALSE'
+      IamInstanceProfile:
+        Ref: InstanceProfile
+      ImageId:
+        Fn::FindInMap:
+        - AWSRegionArch2AMI
+        - Ref: AWS::Region
+        - Fn::FindInMap:
+          - AWSInstanceType2Arch
+          - Ref: InstanceType
+          - Arch
+      InstanceType:
+        Ref: InstanceType
+      KeyName:
+        Ref: KeyName
+      Monitoring: 'false'
+      NetworkInterfaces:
+      - GroupSet:
+        - Ref: InstanceSecurityGroup
+        AssociatePublicIpAddress: 'true'
+        DeviceIndex: '0'
+        DeleteOnTermination: 'true'
+        SubnetId:
+          Ref: Subnet
+      Tags:
+      - Key: Name
+        Value: Amazon DynamoDB Storage Backend for JanusGraph on AWS
+      UserData:
+        Fn::Base64:
+          Fn::Join:
+          - ''
+          - - "#!/bin/bash\n"
+            - "export SDKMAN_DIR=/usr/local/sdkman && curl -s https://get.sdkman.io | bash && source /usr/local/sdkman/bin/sdkman-init.sh\n"
+            - "echo 'export SDKMAN_DIR=/usr/local/sdkman; source /usr/local/sdkman/bin/sdkman-init.sh' > /etc/profile.d/sdkman.sh\n"
+            - "yum update -y -q -e 0 && yum upgrade -y -q -e 0 && yum install -y java-1.8.0-openjdk-devel > /home/ec2-user/yumupdates.log\n"
+            - "yum remove -y java-1.7.0-openjdk > /home/ec2-user/yumremovejava7.log\n"
+            - "sdk install maven < /dev/null && set -x\n"
+            - "mvn -version > /home/ec2-user/maven-installation-settings.log\n"
+            - "export GREMLIN_SERVER_USERNAME='ec2-user'\n"
+            - "export LOG_DIR=/var/log/gremlin-server\n"
+            - "export SERVER_DIRNAME=dynamodb-janusgraph-storage-backend-1.2.0\n"
+            - "export SERVER_ZIP=${SERVER_DIRNAME}.zip\n"
+            - "export PACKAGES_DIR=/usr/local/packages\n"
+            - "export INSTALL_DIR=${PACKAGES_DIR}/${SERVER_DIRNAME}\n"
+            - "export REPO_PARENT_DIR=/tmp/shm\n"
+            - "export REPO_ARCHIVE_DIR=${REPO_PARENT_DIR}/dynamodb-janusgraph-storage-backend-master\n"
+            - "mkdir -p ${LOG_DIR} ${INSTALL_DIR} /tmp/shm\n"
+            - "export SERVICE_SCRIPT=${INSTALL_DIR}/bin/gremlin-server-service.sh\n"
+            - "pushd ${REPO_PARENT_DIR}\n"
+            - "wget https://github.com/awslabs/dynamodb-janusgraph-storage-backend/archive/master.zip && unzip -q master.zip\n"
+            - "pushd ${REPO_ARCHIVE_DIR}\n"
+            - "src/test/resources/install-gremlin-server.sh > /home/ec2-user/gremlin-server-installation.log && popd && popd\n"
+            - "pushd ${PACKAGES_DIR}\n"
+            - "mv ${REPO_ARCHIVE_DIR}/server/${SERVER_DIRNAME} . && rm -rf ${REPO_PARENT_DIR}/* && chmod u+x ${SERVICE_SCRIPT} && ln -s ${SERVICE_SCRIPT} /etc/init.d/gremlin-server && chkconfig --add gremlin-server\n"
+            - "export BACKEND_PROPERTIES=${INSTALL_DIR}/conf/gremlin-server/dynamodb.properties\n"
+            - "aws s3 cp "
+            - Ref: "StorageBackendPropertiesFileS3Url"
+            - " ${BACKEND_PROPERTIES}\n"
+            - "chown -R ${GREMLIN_SERVER_USERNAME}:${GREMLIN_SERVER_USERNAME} ${LOG_DIR} ${INSTALL_DIR}\n"
+            - "ln -s ${INSTALL_DIR}/conf /home/ec2-user/conf && chmod a+r /home/ec2-user/conf\n"
+            - "service gremlin-server start > /home/ec2-user/gremlin-server-start.log\n\n"
+Outputs:
+  SshTunnels:
+    Value:
+      Fn::Join:
+      - ''
+      - - ssh -o ServerAliveInterval=50 -nNT -L
+        - Ref: GremlinServerPort
+        - ":localhost:"
+        - Ref: GremlinServerPort
+        - " -i ${HOME}/.ec2/"
+        - Ref: KeyName
+        - ".pem ec2-user@"
+        - Fn::GetAtt:
+          - WebServerInstance
+          - PublicDnsName
+    Description: Use these SSH tunnels to access Gremlin Server.
+  GremlinShell:
+    Value:
+      Fn::Join:
+      - ''
+      - - "ssh -o ServerAliveInterval=50 -t -i ${HOME}/.ec2/"
+        - Ref: KeyName
+        - ".pem ec2-user@"
+        - Fn::GetAtt:
+          - WebServerInstance
+          - PublicDnsName
+        - " /usr/local/packages/dynamodb-janusgraph-storage-backend-1.2.0/bin/gremlin.sh"
+    Description: Use this remote shell to interact with the graph.
+  GremlinServerEndpoint:
+    Value:
+      Fn::Join:
+      - ''
+      - - 'http://localhost:'
+        - Ref: GremlinServerPort
+    Description: This is the Gremlin Server Websockets endpoint after creating the
+      SSH tunnel.
+  SshAccess:
+    Value:
+      Fn::Join:
+      - ''
+      - - ssh -o ServerAliveInterval=50 -i ${HOME}/.ec2/
+        - Ref: KeyName
+        - ".pem ec2-user@"
+        - Fn::GetAtt:
+          - WebServerInstance
+          - PublicDnsName
+    Description: This is how you gain remote access to the machine.
+  Note:
+    Value: Wait while your EC2 host to boot and start Gremlin Server with the Amazon
+      DynamoDB Storage Backend for JanusGraph.
+    Description: ''

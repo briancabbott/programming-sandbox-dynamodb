@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-getting-started-for-game-developers undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-getting-started-for-game-developers",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-getting-started-for-game-developers",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-getting-started-for-game-developers",
+    "startTime": "2020-12-17T17:24:51.009Z",
+    "endTime": "2020-12-17T17:24:51.759Z",
+    "childProcessPid": 98843,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-getting-started-for-game-developers--98843"
+}

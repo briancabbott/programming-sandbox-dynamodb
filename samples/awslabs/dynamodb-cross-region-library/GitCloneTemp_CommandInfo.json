@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-cross-region-library undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-cross-region-library",
+    "repo": "https://github.com/awslabs/dynamodb-cross-region-library",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-cross-region-library",
+    "startTime": "2020-12-17T06:12:11.639Z",
+    "endTime": "2020-12-17T06:12:13.248Z",
+    "childProcessPid": 77543,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-cross-region-library--77543"
+}

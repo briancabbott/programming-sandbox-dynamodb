@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-janusgraph-storage-backend undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-janusgraph-storage-backend",
+    "repo": "https://github.com/awslabs/dynamodb-janusgraph-storage-backend",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-janusgraph-storage-backend",
+    "startTime": "2020-12-17T06:12:17.347Z",
+    "endTime": "2020-12-17T06:12:28.679Z",
+    "childProcessPid": 77572,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-janusgraph-storage-backend--77572"
+}

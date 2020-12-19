@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-design-patterns undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-design-patterns",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-design-patterns",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-design-patterns",
+    "startTime": "2020-12-17T17:24:48.828Z",
+    "endTime": "2020-12-17T17:24:51.009Z",
+    "childProcessPid": 98628,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-design-patterns--98628"
+}

@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-dynamodb-encryption-java undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-dynamodb-encryption-java",
+    "repo": "https://github.com/aws/aws-dynamodb-encryption-java",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-dynamodb-encryption-java",
+    "startTime": "2020-12-17T20:34:16.582Z",
+    "endTime": "2020-12-17T20:34:17.803Z",
+    "childProcessPid": 50078,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-dynamodb-encryption-java--50078"
+}

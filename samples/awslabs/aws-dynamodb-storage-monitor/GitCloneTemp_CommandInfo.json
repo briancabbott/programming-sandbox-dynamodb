@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/aws-dynamodb-storage-monitor undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/aws-dynamodb-storage-monitor",
+    "repo": "https://github.com/awslabs/aws-dynamodb-storage-monitor",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/aws-dynamodb-storage-monitor",
+    "startTime": "2020-12-17T04:37:32.789Z",
+    "endTime": "2020-12-17T04:37:33.546Z",
+    "childProcessPid": 72432,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--aws-dynamodb-storage-monitor--72432"
+}

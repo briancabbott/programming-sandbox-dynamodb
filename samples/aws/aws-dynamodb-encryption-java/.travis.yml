@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - openjdk8
+  - openjdk11
+install: /bin/true
+script: mvn install --quiet
+after_success:
+  # https://docs.codecov.io/docs/about-the-codecov-bash-uploader
+  - bash <(curl -s https://codecov.io/bash)

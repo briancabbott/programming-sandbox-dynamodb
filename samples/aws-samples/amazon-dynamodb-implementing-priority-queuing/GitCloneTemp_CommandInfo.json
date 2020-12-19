@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws-samples/amazon-dynamodb-implementing-priority-queuing undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-implementing-priority-queuing",
+    "repo": "https://github.com/aws-samples/amazon-dynamodb-implementing-priority-queuing",
+    "targetPath": "undefined\\aws---12-17-2020--darUMEyPxKCBfyuWThWorc/amazon-dynamodb-implementing-priority-queuing",
+    "startTime": "2020-12-17T17:24:51.760Z",
+    "endTime": "2020-12-17T17:24:52.753Z",
+    "childProcessPid": 98915,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws-samples--amazon-dynamodb-implementing-priority-queuing--98915"
+}

@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-backup-scheduler undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-backup-scheduler",
+    "repo": "https://github.com/awslabs/dynamodb-backup-scheduler",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-backup-scheduler",
+    "startTime": "2020-12-17T06:11:56.915Z",
+    "endTime": "2020-12-17T06:11:57.819Z",
+    "childProcessPid": 77465,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-backup-scheduler--77465"
+}

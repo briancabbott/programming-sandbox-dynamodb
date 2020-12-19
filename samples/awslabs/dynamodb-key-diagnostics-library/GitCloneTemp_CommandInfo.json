@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-key-diagnostics-library undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-key-diagnostics-library",
+    "repo": "https://github.com/awslabs/dynamodb-key-diagnostics-library",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-key-diagnostics-library",
+    "startTime": "2020-12-17T06:12:28.680Z",
+    "endTime": "2020-12-17T06:12:29.539Z",
+    "childProcessPid": 77623,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-key-diagnostics-library--77623"
+}

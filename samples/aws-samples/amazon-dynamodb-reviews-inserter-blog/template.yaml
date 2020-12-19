@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Getting started with DynamoDB blog sample items inserter function
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: getting-started-with-dynamodb-reviews-inserter
+    Description: This application deploys a lambda function that is used to insert reviews into a table created during the "Getting Started with DynamoDB" blog post on the AWS Databases Blog
+    Author: William Kalescky
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: https://raw.githubusercontent.com/aws-samples/amazon-dynamodb-reviews-inserter-blog/master/LICENSE
+    SourceCodeURL: https://github.com/aws-samples/amazon-dynamodb-reviews-inserter-blog
+    HomePageURL: https://github.com/aws-samples/amazon-dynamodb-reviews-inserter-blog
+    ReadmeURL: https://raw.githubusercontent.com/aws-samples/amazon-dynamodb-reviews-inserter-blog/master/README.md
+    SemanticVersion: 0.0.1
+Parameters:
+    DynamoDBTableName:
+        Type: String
+        Default: product_reviews
+Resources:
+    ReviewInserter:
+        Type: AWS::Serverless::Function
+        Properties:
+            Runtime: python2.7
+            Handler: lambda_function.lambda_handler
+            CodeUri: 's3://aws-database-blog/artifacts/getting_started_dynamodb/dynamodb-reviews-inserter-b1884b7f-e341-4641-a50d-459b56c3cc3b.zip'
+            Description: Lambda to insert dynamodb reviews
+            MemorySize: 128
+            Timeout: 15
+            Policies:
+                - AWSLambdaExecute
+                - DynamoDBCrudPolicy:
+                    TableName: 
+                        !Join
+                          - ''
+                          - - 'arn:'
+                            - 'aws:'
+                            - !Ref 'AWS::Region'
+                            - ':'
+                            - !Ref 'AWS::AccountId'
+                            - ':'
+                            - 'table/'
+                            - !Ref DynamoDBTableName
+            Environment:
+                Variables:
+                    table_name: !Ref DynamoDBTableName
+
+
+
+                
+
+        

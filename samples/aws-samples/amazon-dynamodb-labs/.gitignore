@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+public/
+__pycache__/
+.python-version
+build

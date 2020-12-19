@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-sdk-go-v2 undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-sdk-go-v2",
+    "repo": "https://github.com/aws/aws-sdk-go-v2",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-sdk-go-v2",
+    "startTime": "2020-12-17T20:42:51.744Z",
+    "endTime": "2020-12-17T20:43:42.114Z",
+    "childProcessPid": 53126,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-sdk-go-v2--53126"
+}

@@ -1,0 +1,167 @@
+{
+  "ModelName": "CartTable",
+  "DataModel": [
+    {
+      "TableName": "CartTable",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "CustomerID",
+          "AttributeType": "S"
+        },
+        "SortKey": {
+          "AttributeName": "Status#Date",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "ItemSKU",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Price",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Count",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "Status",
+          "AttributeType": "S"
+        }
+      ],
+      "GlobalSecondaryIndexes": [
+        {
+          "IndexName": "GSI-SKU",
+          "KeyAttributes": {
+            "PartitionKey": {
+              "AttributeName": "ItemSKU",
+              "AttributeType": "S"
+            },
+            "SortKey": {
+              "AttributeName": "Status#Date",
+              "AttributeType": "S"
+            }
+          },
+          "Projection": {
+            "ProjectionType": "ALL"
+          }
+        }
+      ],
+      "TableData": [
+        {
+          "CustomerID": {
+            "S": "Liz"
+          },
+          "Status#Date": {
+            "S": "Shipped#2019-11-26T22:46:26"
+          },
+          "ItemSKU": {
+            "S": "d9bl3"
+          },
+          "Price": {
+            "S": "34.99"
+          },
+          "Count": {
+            "S": "1"
+          },
+          "Status": {
+            "S": "Saved"
+          }
+        },
+        {
+          "CustomerID": {
+            "S": "Chad"
+          },
+          "Status#Date": {
+            "S": "Active#2019-10-08T21:11:42"
+          },
+          "ItemSKU": {
+            "S": "72f49"
+          },
+          "Price": {
+            "S": "12.49"
+          },
+          "Count": {
+            "S": "1"
+          },
+          "Status": {
+            "S": "Active"
+          }
+        },
+        {
+          "CustomerID": {
+            "S": "Sue"
+          },
+          "Status#Date": {
+            "S": "Active#2019-10-03T12:33:16"
+          },
+          "ItemSKU": {
+            "S": "ef9ca"
+          },
+          "Price": {
+            "S": "4.99"
+          },
+          "Count": {
+            "S": "1"
+          },
+          "Status": {
+            "S": "Active"
+          }
+        },
+        {
+          "CustomerID": {
+            "S": "Sue"
+          },
+          "Status#Date": {
+            "S": "Saved#2019-10-07T08:24:22"
+          },
+          "ItemSKU": {
+            "S": "72f49"
+          },
+          "Price": {
+            "S": "12.49"
+          },
+          "Count": {
+            "S": "1"
+          },
+          "Status": {
+            "S": "Active"
+          }
+        },
+        {
+          "CustomerID": {
+            "S": "Sue"
+          },
+          "Status#Date": {
+            "S": "Active#2019-10-05T10:07:17"
+          },
+          "ItemSKU": {
+            "S": "b932s"
+          },
+          "Price": {
+            "S": "67.99"
+          },
+          "Count": {
+            "S": "1"
+          },
+          "Status": {
+            "S": "Saved"
+          }
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      }
+    }
+  ],
+  "ModelMetadata": {
+    "DateCreated": "Feb 24, 2020, 3:50 PM",
+    "DateLastModified": "Feb 25, 2020, 10:39 PM",
+    "Author": "",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "2.0"
+  }
+}

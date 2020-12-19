@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-data-mapper-js undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-data-mapper-js",
+    "repo": "https://github.com/awslabs/dynamodb-data-mapper-js",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-data-mapper-js",
+    "startTime": "2020-12-17T06:12:13.249Z",
+    "endTime": "2020-12-17T06:12:16.449Z",
+    "childProcessPid": 77553,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-data-mapper-js--77553"
+}

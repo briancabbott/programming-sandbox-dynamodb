@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-transactions undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-transactions",
+    "repo": "https://github.com/awslabs/dynamodb-transactions",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-transactions",
+    "startTime": "2020-12-17T06:12:34.506Z",
+    "endTime": "2020-12-17T06:12:38.192Z",
+    "childProcessPid": 77650,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-transactions--77650"
+}

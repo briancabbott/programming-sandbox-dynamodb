@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-xray-sdk-go undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-xray-sdk-go",
+    "repo": "https://github.com/aws/aws-xray-sdk-go",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-xray-sdk-go",
+    "startTime": "2020-12-17T21:16:36.816Z",
+    "endTime": "2020-12-17T21:16:37.953Z",
+    "childProcessPid": 56244,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-xray-sdk-go--56244"
+}

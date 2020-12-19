@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-lambda-go undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-lambda-go",
+    "repo": "https://github.com/aws/aws-lambda-go",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-lambda-go",
+    "startTime": "2020-12-17T20:37:48.725Z",
+    "endTime": "2020-12-17T20:37:50.267Z",
+    "childProcessPid": 51643,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-lambda-go--51643"
+}

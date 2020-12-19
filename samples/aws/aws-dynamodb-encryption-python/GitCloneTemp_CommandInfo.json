@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-dynamodb-encryption-python undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-dynamodb-encryption-python",
+    "repo": "https://github.com/aws/aws-dynamodb-encryption-python",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-dynamodb-encryption-python",
+    "startTime": "2020-12-17T20:34:17.803Z",
+    "endTime": "2020-12-17T20:34:18.897Z",
+    "childProcessPid": 50091,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-dynamodb-encryption-python--50091"
+}

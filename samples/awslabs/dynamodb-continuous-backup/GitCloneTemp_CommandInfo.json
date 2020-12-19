@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-continuous-backup undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-continuous-backup",
+    "repo": "https://github.com/awslabs/dynamodb-continuous-backup",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-continuous-backup",
+    "startTime": "2020-12-17T06:11:57.820Z",
+    "endTime": "2020-12-17T06:12:11.639Z",
+    "childProcessPid": 77474,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-continuous-backup--77474"
+}

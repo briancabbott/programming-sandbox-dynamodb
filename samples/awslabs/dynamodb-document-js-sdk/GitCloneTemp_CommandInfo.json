@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/awslabs/dynamodb-document-js-sdk undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-document-js-sdk",
+    "repo": "https://github.com/awslabs/dynamodb-document-js-sdk",
+    "targetPath": "undefined\\awsl--12-16-2020--8yR4CuKZ1uZGqL6WoB9wJK/dynamodb-document-js-sdk",
+    "startTime": "2020-12-17T06:12:16.450Z",
+    "endTime": "2020-12-17T06:12:17.339Z",
+    "childProcessPid": 77567,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--awslabs--dynamodb-document-js-sdk--77567"
+}

@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: >-
+  This application creates alarms and dashboards for a backend service.
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: aws-dynamodb-stream-eventbridge-fanout
+    Description: >-
+      This application forwards events from a DynamoDB stream into an EventBridge event bus.
+    Author: AWS Serverless Application Repository
+    SpdxLicenseId: Apache-2.0
+    Labels: [serverless, dynamodb, eventbridge]
+    HomePageUrl: https://github.com/awslabs/aws-dynamodb-stream-eventbridge-fanout
+    SemanticVersion: 1.0.2
+    SourceCodeUrl: https://github.com/awslabs/aws-dynamodb-stream-eventbridge-fanout/tree/1.0.2
+    LicenseUrl: ../../LICENSE
+    ReadmeUrl: ../../README.md
+
+Parameters:
+  DynamoDBStreamArn:
+    Type: String
+    Description: Amazon DynamoDB Stream ARN.
+  EventBusName:
+    Type: String
+    Default: "default"
+    Description: AWS EventBridge Event Bus Name.
+  EventBridgeMaxAttempt:
+    Type: Number
+    Default: 1
+    MinValue: 1
+    MaxValue: 5
+    Description: Max attempt to put events into AWS EventBridge Event Bus. Default is 1.
+Resources:
+  FanoutLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: '../../target/aws-dynamodb-stream-eventbridge-fanout-1.0.2.jar'
+      Handler: 'com.amazonaws.dynamodb.stream.fanout.lambda.FanoutHandler::handleRequest'
+      MemorySize: 768
+      Timeout: 360
+      Runtime: java8
+      Tracing: Active
+      Environment:
+        Variables:
+          DLQ_URL: !Ref FanoutDLQ
+          MAX_ATTEMPT: !Ref EventBridgeMaxAttempt
+          EVENT_BUS_NAME: !Ref EventBusName
+      Policies:
+        - SQSSendMessagePolicy:
+            QueueName: !GetAtt FanoutDLQ.QueueName
+        - Version: '2012-10-17' # Policy Document
+          Statement:
+            - Effect: Allow
+              Action:
+                - events:PutEvents
+              Resource: '*'
+      Events:
+        FanoutSource:
+          Type: DynamoDB
+          Properties:
+            Stream: !Ref DynamoDBStreamArn
+            StartingPosition: TRIM_HORIZON
+            BatchSize: 10
+            Enabled: true
+  FanoutDLQ:
+    Type: "AWS::SQS::Queue"
+
+Outputs:
+  FanoutLambdaName:
+    Description: "Fanout Lambda Function Name"
+    Value: !Ref FanoutLambda
+  FanoutDlqUrl:
+    Description: "Fanout SQS DLQ URL"
+    Value: !Ref FanoutDLQ

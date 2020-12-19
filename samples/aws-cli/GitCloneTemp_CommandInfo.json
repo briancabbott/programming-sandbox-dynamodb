@@ -1,0 +1,10 @@
+{
+    "commandText": "git clone --progress --verbose https://github.com/aws/aws-cli undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-cli",
+    "repo": "https://github.com/aws/aws-cli",
+    "targetPath": "undefined\\aws--12-17-2020--sCVJyccsisrGPGzRcuvydd/aws-cli",
+    "startTime": "2020-12-17T20:33:36.810Z",
+    "endTime": "2020-12-17T20:34:02.883Z",
+    "childProcessPid": 49805,
+    "executionErrors": [],
+    "commandLogFilePath": "/Users/brian/dev_space/Open-Sources/AWS/workingdir/--aws--aws-cli--49805"
+}
