@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.8
+Created-By: 1.8.0_265-b01 (Amazon.com Inc.)
+Main-Class: com.amazonaws.services.dynamodbv2.local.main.ServerRunner
+Bundle-Description: DynamoDB Local is a small client-side database and
+  server that mimics the DynamoDB service.
+Bundle-License: DynamoDB Local License Agreement (classpath:LICENSE.tx
+ t)
+Class-Path: . log4j2.xml DynamoDBLocal_lib/Apache-HttpComponents-HttpC
+ lient-4.5.x.jar DynamoDBLocal_lib/Apache-HttpComponents-HttpCore-4.4.
+ x.jar DynamoDBLocal_lib/JMESPathJava-1.0.jar DynamoDBLocal_lib/Log4j-
+ api-2.x.jar DynamoDBLocal_lib/antlr-runtime-4.5.jar DynamoDBLocal_lib
+ /aws-java-sdk-core-1.11.780.jar DynamoDBLocal_lib/aws-java-sdk-dynamo
+ db-1.11.780.jar DynamoDBLocal_lib/commons-cli-1.2.jar DynamoDBLocal_l
+ ib/commons-lang3-3.x.jar DynamoDBLocal_lib/ion-java-1.5.1.jar DynamoD
+ BLocal_lib/jackson-annotations-2.6.x.jar DynamoDBLocal_lib/jackson-co
+ re-2.6.x.jar DynamoDBLocal_lib/jackson-databind-2.6.x.20200928.jar Dy
+ namoDBLocal_lib/jackson-dataformat-cbor-2.6.x.jar DynamoDBLocal_lib/j
+ etty-ajp-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-annotations-8.1
+ .12.v20130726.jar DynamoDBLocal_lib/jetty-client-8.1.12.v20130726.jar
+  DynamoDBLocal_lib/jetty-continuation-8.1.12.v20130726.jar DynamoDBLo
+ cal_lib/jetty-deploy-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-htt
+ p-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-io-8.1.12.v20130726.ja
+ r DynamoDBLocal_lib/jetty-jmx-8.1.12.v20130726.jar DynamoDBLocal_lib/
+ jetty-jndi-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-overlay-deplo
+ yer-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-plus-8.1.12.v2013072
+ 6.jar DynamoDBLocal_lib/jetty-policy-8.1.12.v20130726.jar DynamoDBLoc
+ al_lib/jetty-rewrite-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-sec
+ urity-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-server-8.1.12.v201
+ 30726.jar DynamoDBLocal_lib/jetty-servlet-8.1.12.v20130726.jar Dynamo
+ DBLocal_lib/jetty-servlets-8.1.12.v20130726.jar DynamoDBLocal_lib/jet
+ ty-start.jar DynamoDBLocal_lib/jetty-util-8.1.12.v20130726.jar Dynamo
+ DBLocal_lib/jetty-webapp-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty
+ -websocket-8.1.12.v20130726.jar DynamoDBLocal_lib/jetty-xml-8.1.12.v2
+ 0130726.jar DynamoDBLocal_lib/joda-time-2.8.2.jar DynamoDBLocal_lib/l
+ ibsqlite4java-linux-aarch64.so DynamoDBLocal_lib/libsqlite4java-linux
+ -amd64.so DynamoDBLocal_lib/libsqlite4java-linux-i386.so DynamoDBLoca
+ l_lib/libsqlite4java-osx.dylib DynamoDBLocal_lib/servlet-api-3.0.jar 
+ DynamoDBLocal_lib/spdy-core-8.1.12.v20130726.jar DynamoDBLocal_lib/sp
+ dy-jetty-8.1.12.v20130726.jar DynamoDBLocal_lib/spdy-jetty-http-8.1.1
+ 2.v20130726.jar DynamoDBLocal_lib/sqlite4java-win32-x64.dll DynamoDBL
+ ocal_lib/sqlite4java-win32-x86.dll DynamoDBLocal_lib/sqlite4java.jar
+
