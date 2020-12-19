@@ -1,0 +1,1 @@
+aws dynamodb query --table-name Music  --endpoint-url http://localhost:8000 --key-conditions file://bin_cli/key_conditions.json

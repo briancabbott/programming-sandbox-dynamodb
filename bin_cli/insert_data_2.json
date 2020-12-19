@@ -1,0 +1,6 @@
+{
+    "ConsumedCapacity": {
+        "TableName": "Music",
+        "CapacityUnits": 1.0
+    }
+}

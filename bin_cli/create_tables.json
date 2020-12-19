@@ -1,0 +1,36 @@
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Artist",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "SongTitle",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Music",
+        "KeySchema": [
+            {
+                "AttributeName": "Artist",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "SongTitle",
+                "KeyType": "RANGE"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2020-12-19T03:06:26.604000-07:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 1,
+            "WriteCapacityUnits": 1
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:us-east-1:283076912572:table/Music",
+        "TableId": "24206203-f73d-4510-8edc-157ef492d700"
+    }
+}

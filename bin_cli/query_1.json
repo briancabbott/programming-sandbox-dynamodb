@@ -1,0 +1,18 @@
+{
+    "Items": [
+        {
+            "AlbumTitle": {
+                "S": "Somewhat Famous"
+            },
+            "Artist": {
+                "S": "No One You Know"
+            },
+            "SongTitle": {
+                "S": "Call Me Today"
+            }
+        }
+    ],
+    "Count": 1,
+    "ScannedCount": 1,
+    "ConsumedCapacity": null
+}
