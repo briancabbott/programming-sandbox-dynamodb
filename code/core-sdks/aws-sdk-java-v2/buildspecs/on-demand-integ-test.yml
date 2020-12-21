@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: "$JAVA_RUNTIME"
+
+  build:
+    commands:
+      - mvn clean install -Dskip.unit.tests -P integration-tests -Dfindbugs.skip -Dcheckstyle.skip -Dfailsafe.rerunFailingTestsCount=1 --fail-at-end
+      - JAVA_VERSION=$(java -version 2>&1 | grep -i version | cut -d'"' -f2 | cut -d'.' -f1-1)
+      - echo $JAVA_VERSION
+      - |
+        if [ "$JAVA_VERSION" -ge "9" ]; then
+          cd test/module-path-tests
+          mvn package
+          mvn exec:exec -P integ-tests
+        fi
