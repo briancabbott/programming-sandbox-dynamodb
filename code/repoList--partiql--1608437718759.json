@@ -1,0 +1,51 @@
+{
+    "organizationName": "partiql",
+    "generationTime": "2020-12-20T04:15:18.766Z",
+    "repositories": [
+        {
+            "url": "https://github.com/partiql/.github",
+            "id": "MDEwOlJlcG9zaXRvcnkyNDUwMjU2OTM=",
+            "createdAt": "2020-03-04T23:29:40Z",
+            "description": null,
+            "diskUsage": 7,
+            "name": ".github",
+            "pushedAt": "2019-11-01T20:50:12Z"
+        },
+        {
+            "url": "https://github.com/partiql/partiql-ir-generator",
+            "id": "MDEwOlJlcG9zaXRvcnkyMzgwNzE0MDI=",
+            "createdAt": "2020-02-03T22:05:04Z",
+            "description": "PartiQL I.R. Generator  (P.I.G.)",
+            "diskUsage": 444,
+            "name": "partiql-ir-generator",
+            "pushedAt": "2020-11-25T17:20:50Z"
+        },
+        {
+            "url": "https://github.com/partiql/partiql-lang-kotlin",
+            "id": "MDEwOlJlcG9zaXRvcnkxODY0NzQzOTQ=",
+            "createdAt": "2019-05-13T18:28:06Z",
+            "description": "A implementation of PartiQL written in Kotlin.",
+            "diskUsage": 3266,
+            "name": "partiql-lang-kotlin",
+            "pushedAt": "2020-12-18T19:57:33Z"
+        },
+        {
+            "url": "https://github.com/partiql/partiql-spec",
+            "id": "MDEwOlJlcG9zaXRvcnkxODY0NzQ0NjU=",
+            "createdAt": "2019-05-13T18:28:37Z",
+            "description": "The language specification of PartiQL.",
+            "diskUsage": 188,
+            "name": "partiql-spec",
+            "pushedAt": "2020-10-05T23:27:30Z"
+        },
+        {
+            "url": "https://github.com/partiql/partiql-tutorials",
+            "id": "MDEwOlJlcG9zaXRvcnkyMTU2MTk4MDM=",
+            "createdAt": "2019-10-16T18:43:45Z",
+            "description": "PartiQL Tutorials",
+            "diskUsage": 78,
+            "name": "partiql-tutorials",
+            "pushedAt": "2019-12-04T23:09:33Z"
+        }
+    ]
+}
